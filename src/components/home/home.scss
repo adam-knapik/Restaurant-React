@@ -1,0 +1,86 @@
+@use '../../utilities/colors' as c;
+@use '../../utilities/root' as r;
+
+.home__welcome, .home__about {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+
+    .home__welcome__info, .home__about__info {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+
+        .home__welcome__info__link {
+            width: 50%;
+            display: block;
+            text-align: center;
+            border: 2px solid c.$color-yellow;
+            border-radius: 2em;
+            padding: 1em 0.6em;
+            transition: r.$transition;
+
+            &:hover {
+                border-color: c.$color-white;
+                color: c.$color-white;
+            }
+        }
+
+        .home__about__info__quote {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .home__welcome__info {
+        text-align: left;
+    }
+
+    .home__about__info {
+        text-align: center;
+        gap: 2em;
+    }
+
+    .home__welcome__hero, .home__about__hero {
+        width: 50%;
+
+        .home__welcome__hero__img, .home__about__hero__img {
+           width: 100%;
+           height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .home__welcome {
+        flex-direction: column;
+    }
+
+    .home__about {
+        flex-direction: column-reverse ;
+    }
+
+    .home__welcome, .home__about {
+        align-items: center;
+        gap: 2em;
+
+        .home__welcome__info, .home__about__info {
+            width: 100%;
+        }
+
+        .home__welcome__hero, .home__about__hero {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home__welcome {
+        .home__welcome__info {
+            .home__welcome__info__link {
+                width: 70%;
+            }
+        }
+    }
+}

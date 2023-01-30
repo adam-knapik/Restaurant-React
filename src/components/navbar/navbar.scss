@@ -1,0 +1,98 @@
+@use '../../utilities/colors' as c;
+@use '../../utilities/root' as r;
+
+.navbar {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: c.$color-black-transparent;
+
+    .navbar__logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.4em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .navbar__links {
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+
+        .navbar__link {
+            margin: 0 5px;
+            padding: 10px 20px;
+            color: c.$color-white;
+            text-decoration: none;
+            transition: r.$transition;
+
+            &:hover {
+                color: c.$color-yellow;
+            }
+
+            &.active {
+                text-decoration: solid underline 2px;
+            }
+        }
+    }
+
+    .navbar__mobile {
+        display: none;
+        background: transparent;
+        border: none;
+
+        .navbar__mobile__icon {
+            color: c.$color-white;
+            font-size: 1.5em;
+            border: none;
+            background: transparent;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        background-color: c.$color-black;
+
+        .navbar__links {
+            height: 50vh;
+            width: 100%;
+            display: grid;
+            position: absolute;
+            align-items: center;
+            text-align: center;;
+            justify-content: center;
+            background-color: c.$color-black;
+            left: -100%;
+            top: 8vh;
+            transition: r.$transition;
+            z-index: 7;
+
+            &.active {
+                left: 0;
+            }
+
+
+            .navbar__links {
+                width: 100%;
+                transition: r.$transition;
+            }
+        }
+
+        .navbar__mobile {
+            display: block;
+            position: absolute;
+            right: 25px;
+        }
+    }
+}

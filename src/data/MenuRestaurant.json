@@ -1,0 +1,75 @@
+{
+    "burgers" : [
+        {
+            "name": "Burger 1",
+            "price": "20.90",
+            "description": "fajny 1"
+        },
+        {
+            "name": "Burger 2",
+            "price": "27.00",
+            "description": "fajny 2"
+        },
+        {   
+            "name": "Burger 3",
+            "price": "29.00",
+            "description": "fajny 3"
+        },
+        {
+            "name": "Burger 4",
+            "price": "35.00",
+            "description": "fajny 4"
+        }
+    ],
+    "additives" : [
+        {
+            "name": "Frytki",
+            "price": "7.00",
+            "quantity": "150g"
+        },
+        {
+            "name": "Frytki z batatów",
+            "price": "9.00",
+            "quantity": "150g"
+        },
+        {
+            "name": "Krążki cebulowe",
+            "price": "10.00",
+            "quantity": "9 szt"
+        }
+    ],
+
+    "cold_drinks" : [
+        {
+            "name": "Woda niegazowana/gazowana",
+            "price": "2.00",
+            "quantity": "500ml"
+        },
+        {
+            "name": "Sok",
+            "price": "4.00",
+            "quantity": "500ml"
+        },
+        {
+            "name": "Coca Cola",
+            "price": "5.00",
+            "quantity": "500ml"
+        },
+        {
+            "name": "Sprite",
+            "price": "5.00",
+            "quantity": "500ml"
+        },
+        {
+            "name": "Fuzztea",
+            "price": "5.00",
+            "quantity": "500ml"
+        }
+    ],
+    "hot_drinks" : [
+
+    ],
+    "beer" : [
+        
+    ]
+}

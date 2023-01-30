@@ -1,0 +1,58 @@
+@use './utilities/root' as r;
+@use './utilities/colors' as c;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+*, :after, :before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cormorant Upright', serif;
+  font-size: 1.1em;
+  color: c.$color-white;
+  background: url('./assets/dark-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  min-height: 60vh;
+  width: r.$container-width-lg;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5em;
+  margin: 0 auto;
+  padding: 5em 2em;
+}
+
+h1 {
+  color: c.$color-yellow;
+}
+
+a {
+  color: c.$color-yellow;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+      margin-top: 8vh;
+      width: r.$container-width-md;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      width: r.$container-width-sm;
+  }
+}

@@ -1,0 +1,37 @@
+@use '../../utilities/colors' as c;
+@use '../../utilities/root' as r;
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+    .login__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .login__form__login, 
+        .login__form__password {
+            width: 100%;
+            padding: 1em;
+            border: 2px solid c.$color-yellow;
+            border-radius: 0.5em;
+            resize: none;
+        }
+        .login__form__button {
+            background: c.$color-yellow;
+            border-radius: 2em;
+            font-size: 0.9em;
+            padding: 0.5em;
+            transition: r.$transition;
+
+            &:hover {
+                color: c.$color-white;
+            }
+        }
+    }
+}

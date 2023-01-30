@@ -1,0 +1,63 @@
+@use '../../utilities/colors' as c;
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    .menu__category {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        .menu__category__card {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5em;
+           
+            .menu__category__card__items {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                gap: 0.6em;
+                
+            }
+
+            .menu__category__card__preview {
+                width: 50%;
+
+                .menu__category__card__preview__image {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;                    
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        .menu__category { 
+            .menu__category__card {
+                flex-direction: column;
+                
+                .menu__category__card__items {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .menu__category__card__preview {
+                    width: 100%;
+                }
+            }
+
+            .menu__category__card--rotate {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}

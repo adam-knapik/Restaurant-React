@@ -1,0 +1,92 @@
+{
+    "burgers" : [
+        {
+            "id": 1,
+            "name": "Burger Clasic",
+            "price": "20.90",
+            "description": "Klasyczne połączenie wołowiny z serem"
+        },
+        {
+            "id": 2,
+            "name": "Burger Chicken",
+            "price": "21.90",
+            "description": "Orginalny smak fileta z kurczaka"
+        },
+        {
+            "id": 3,
+            "name": "Burger Cheese ",
+            "price": "22.90",
+            "description": "Klasyczne połączenie wołowiny z serem"
+        },
+        {   
+            "id": 4,
+            "name": "Burger Big",
+            "price": "27.00",
+            "description": "150% wołowiny"
+        },
+        {   
+            "id": 5,
+            "name": "Burger Big Double Cheese",
+            "price": "29.00",
+            "description": "Podwójna ilość sera w 150% wołowiny"
+        },
+        {
+            "id": 6,
+            "name": "Burger Bacon & Onion",
+            "price": "35.00",
+            "description": "200% wołowiny z bekonem i cebulką"
+        }
+    ],
+    "additives" : [
+        {
+            "id": 1,
+            "name": "Frytki",
+            "price": "7.00",
+            "quantity": "150g"
+        },
+        {
+            "id": 2,
+            "name": "Frytki z batatów",
+            "price": "9.00",
+            "quantity": "150g"
+        },
+        {
+            "id": 3,
+            "name": "Krążki cebulowe",
+            "price": "10.00",
+            "quantity": "9szt"
+        }
+    ],  
+    "cold_drinks" : [
+        {
+            "id": 1,
+            "name": "Woda niegazowana/gazowana",
+            "price": "2.00",
+            "quantity": "500ml"
+        },
+        {
+            "id": 2,
+            "name": "Sok",
+            "price": "4.00",
+            "quantity": "500ml"
+        },
+        {
+            "id": 3,
+            "name": "Coca Cola",
+            "price": "5.00",
+            "quantity": "500ml"
+        },
+        {
+            "id": 4,
+            "name": "Sprite",
+            "price": "5.00",
+            "quantity": "500ml"
+        },
+        {
+            "id": 5,
+            "name": "Fuzztea",
+            "price": "5.00",
+            "quantity": "500ml"
+        }
+    ]
+}

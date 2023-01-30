@@ -1,0 +1,102 @@
+@use '../../utilities/colors' as c;
+@use '../../utilities/root' as r;
+
+.manage {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    .manage__message {
+        height: 5vh;
+        width: 100%;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    .manage__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
+        .manage__form__input {
+            width: 100%;
+            padding: 1em;
+            border: 2px solid c.$color-yellow;
+            border-radius: 0.5em;
+            resize: none;
+        }
+
+        .manage__form__button {
+            background: c.$color-yellow;
+            border-radius: 2em;
+            font-size: 0.9em;
+            padding: 0.5em;
+            transition: r.$transition;
+
+            &:hover {
+                color: c.$color-white;
+            }
+        }
+    }
+
+    .manage__container {
+        width: 100%;
+        overflow-x:auto;
+
+        .manage__container__table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid c.$color-black;
+            border-collapse: collapse;
+            
+            thead, 
+            tbody {
+                tr {
+                    th:nth-child(1) {
+                        width: 5%;
+                    }
+                    th {
+                        color: c.$color-yellow;
+                    }
+    
+                    th, td {
+                        text-align: center;
+                        padding: 0.2em;
+                        border: 3px solid c.$color-black;
+                    }
+                }
+            }
+
+            tbody { 
+                tr {             
+                    td:nth-child(2) {
+                        text-align: left;
+                    }
+
+                    td:nth-child(3) {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .manage__container__table__btnEdit, 
+            .manage__container__table__btnDelete {
+                color: c.$color-black;
+                background: c.$color-yellow;
+                border: none;
+                border-radius: 0.5em;
+                padding: 0.5em;
+                transition: r.$transition;
+
+                &:hover {
+                    color: c.$color-white;
+                }
+            }
+
+            .manage__container__table__btnDelete {
+                background: red;
+            }
+        }
+    }
+}
